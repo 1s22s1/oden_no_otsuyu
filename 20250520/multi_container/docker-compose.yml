@@ -1,0 +1,13 @@
+services:
+  app1:
+    image: 1s22s1/sinatra_app
+    ports:
+      - 4567:4567
+  app2:
+    image: 1s22s1/sinatra_app
+    ports:
+      - 4568:4567
+  app3:
+    image: 1s22s1/sinatra_app
+    ports:
+      - 4569:4567
