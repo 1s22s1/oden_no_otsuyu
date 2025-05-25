@@ -18,10 +18,10 @@ vector<int> vec;
 
 void f(int count)
 {
-    if (N == 1)
+    if (count == 1)
     {
         vec = {1};
-        f(N + 1);
+        f(count + 1);
     }
     else if (count <= N)
     {
@@ -30,16 +30,13 @@ void f(int count)
         new_vec.insert(new_vec.end(), vec.begin(), vec.end());
 
         vec = new_vec;
-
-        f(N + 1);
+        f(count + 1);
     }
 }
 
 int main()
 {
     init();
-
-    int N;
 
     cin >> N;
 
