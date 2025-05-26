@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "stacktrace": "cpp",
+        "concepts": "cpp"
     }
 }
