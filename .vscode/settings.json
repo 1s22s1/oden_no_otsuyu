@@ -1,10 +1,16 @@
 {
     "files.associations": {
         "iostream": "cpp",
+        "concepts": "cpp",
+        "vector": "cpp",
+        "random": "cpp",
         "ranges": "cpp",
-        "array": "cpp",
-        "string_view": "cpp",
-        "stacktrace": "cpp",
-        "concepts": "cpp"
-    }
+        "chrono": "cpp",
+        "span": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "string_view": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
