@@ -22,17 +22,24 @@ int main()
     int N;
     cin >> N;
 
-    set<string> s;
+    set<int> s;
 
     for (auto i : ranges::views::iota(0, N))
     {
-        string t;
-        cin >> t;
+        int a;
+        cin >> a;
 
-        s.insert(t);
+        s.insert(a);
     }
 
-    cout << s.size() << endl;
+    if (s.size() == N)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
 
     return 0;
 }
