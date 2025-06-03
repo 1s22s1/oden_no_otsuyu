@@ -51,43 +51,37 @@ int main()
 {
     init();
 
-    int N, M;
-    cin >> N >> M;
+    int N, X, Y;
+    cin >> N >> X >> Y;
 
-    vector<pair<int, int>> ab;
-    for (auto _ : ranges::views::iota(0, M))
+    vector<vector<int>> g(N);
+
+    for (auto i : ranges::views::iota(0, N - 1))
     {
-        int a, b;
-        cin >> a >> b;
-
-        ab.push_back({a, b});
+        g.at(i).push_back(i + 1);
+        g.at(i + 1).push_back(i);
     }
 
-    auto answer = 0;
-    for (auto i : ranges::views::iota(0, M))
+    g.at(X - 1).push_back(Y - 1);
+    g.at(Y - 1).push_back(X - 1);
+
+    map<int, int> answer;
+
+    for (auto i : ranges::views::iota(0, N))
     {
-        vector<vector<int>> g(N);
-
-        for (auto j : ranges::views::iota(0, M))
-        {
-            if (i != j)
-            {
-                g.at(ab.at(i).first - 1).push_back(ab.at(i).second - 1);
-                g.at(ab.at(i).second - 1).push_back(ab.at(i).first - 1);
-            }
-        }
-
-        Graph graph(g);
+        Graph graph(g, i);
         auto visited = graph.visited;
 
-        if (any_of(visited.begin(), visited.end(), [](int n)
-                   { return n == -1; }))
+        for (auto j : ranges::views::iota(0, N))
         {
-            answer++;
+            answer[abs(visited.at(i) - visited.at(j))]++;
         }
     }
 
-    cout << answer << endl;
+    for (auto i : ranges::views::iota(1, N))
+    {
+        cout << answer[i] / 2 << endl;
+    }
 
     return 0;
 }
