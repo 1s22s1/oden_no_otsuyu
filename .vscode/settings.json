@@ -13,7 +13,8 @@
         "string_view": "cpp",
         "bitset": "cpp",
         "algorithm": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "deque": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
