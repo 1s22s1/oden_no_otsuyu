@@ -14,7 +14,10 @@
         "bitset": "cpp",
         "algorithm": "cpp",
         "format": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "tuple": "cpp",
+        "array": "cpp",
+        "stacktrace": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
